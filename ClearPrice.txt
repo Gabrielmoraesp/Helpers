@@ -1,0 +1,4 @@
+function clearPrice($price = null)
+{
+    return (($price) ? str_replace(',', '.', str_replace('.', '', $price)) : null);
+}
