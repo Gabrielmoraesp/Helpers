@@ -1,0 +1,7 @@
+function moneyPT($number)
+{
+	if($number)
+		return number_format($number, 2, ',', '.');
+	else
+		return false;
+}
