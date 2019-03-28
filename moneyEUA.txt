@@ -1,0 +1,7 @@
+function moneyEUA($number)
+{
+	if($number)
+    	return str_replace(',', '.', str_replace('.', '', $number));
+	else
+		return false;
+}
