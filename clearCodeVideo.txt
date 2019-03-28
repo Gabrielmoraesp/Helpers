@@ -1,0 +1,30 @@
+function clearCodeVideo($codigo = null, $streaming = null)
+{
+    if ($codigo && $streaming) {
+        switch ($streaming) {
+            case 2:
+                $codigo = str_replace(
+                    array(
+                        'https://vimeo.com/',
+                        'https://player.vimeo.com/video/'
+                    ),
+                    '',
+                    $codigo
+                );
+                break;
+            case 1:
+                $codigo = str_replace(
+                    array(
+                        'https://www.youtube.com/watch?v=',
+                        'https://youtu.be/',
+                        'https://www.youtube.com/embed/'
+                    ),
+                    '',
+                    $codigo
+                );
+                break;
+        }
+    }
+
+    return $codigo;
+}
