@@ -1,0 +1,6 @@
+function desconto($price, $discount)
+{
+    $value = $price;
+    $percent = $discount / 100.0;
+    return $value - ($percent * $value);
+}
